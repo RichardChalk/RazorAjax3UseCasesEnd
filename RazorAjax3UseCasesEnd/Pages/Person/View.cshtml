@@ -44,7 +44,7 @@
             fetch("View?handler=FetchValue&id=" + id)
                 .then((response) => response.json())
                 .then((json) => {
-                    elem.innerHTML = json.value;
+                    elem.innerHTML = json.value + "kr";
                 });
         }
     </script>
