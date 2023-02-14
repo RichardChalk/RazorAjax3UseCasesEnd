@@ -10,12 +10,12 @@
     <div class="card-body">
         <table class="table" id="posts-table">
             <tr>
-                <th>Manufacturer</th>
-                <th>Model</th>
-                <th>Type</th>
-                <th>Fuel</th>
-                <th>Boughtdate</th>
-                <th></th>
+                <th style="text-align:left">Manufacturer</th>
+                <th style="text-align:left">Model</th>
+                <th style="text-align:left">Type</th>
+                <th style="text-align:left">Fuel</th>
+                <th style="text-align:left">Boughtdate</th>
+                <th style="text-align:left"></th>
             </tr>
             <tbody>
                 @foreach (var car in Model.Cars)
@@ -26,9 +26,11 @@
                         <td>@car.Type</td>
                         <td>@car.Fuel</td>
                         <td>@car.BoughtDate.ToShortDateString()</td>
-                        <td onclick="fetchEvaluation(@car.Id, this)"
-                            class="btn btn-primary">
-                            Get value
+                        <td>
+                            <a onclick="javascript:fetchEvaluation(@car.Id, this)"
+                               class="btn btn-primary">
+                                Get value
+                            </a>
                         </td>
                     </tr>
                 }
